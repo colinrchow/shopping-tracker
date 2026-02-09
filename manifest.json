@@ -1,7 +1,12 @@
 {
     "manifest_version": 3,
-    "version": "1.3",
+    "version": "1.4",
     "name": "Shopping Tracker",
+    "icons": {
+        "16": "images/icon_v2.png",
+        "48": "images/icon_v2.png",
+        "128": "images/icon_v2.png"
+    },
     "action": {
         "default_popup": "index.html",
         "default_icon": "images/icon_v2.png"
