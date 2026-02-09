@@ -1,0 +1,11 @@
+/* text color: #FCFCFC (white)
+body background: #1B2024 (darker)
+el background: #252A2E (lighter)
+highlight: #FE3F39 (red)
+highlight 2: #FFBD28 (yellow)*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
