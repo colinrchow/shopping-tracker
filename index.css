@@ -13,7 +13,7 @@ highlight 2: #FFBD28 (yellow)*/
 
 body {
     background: #1B2024;
-
+    border: 0;
     min-width: 500px;
 }
 
@@ -43,7 +43,6 @@ input::placeholder {
 }
 
 button {
-    background: #FFBD28;
     color: #FCFCFC;
     font-weight: 600;
     font-size: 16px;
@@ -52,8 +51,22 @@ button {
     border-radius: 5px;
     padding: 10px 15px;
     margin: 5px 0;
+
+    transition: background-color 0.1s;
+}
+
+.save-btn {
+    background: #FFBD28;
+}
+
+.save-btn:hover {
+    background: #755b1f;
 }
 
 #delete-all-btn {
     background: #FE3F39;
+}
+
+#delete-all-btn:hover {
+    background: #8d231f;
 }
