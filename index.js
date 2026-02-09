@@ -1,3 +1,5 @@
+// VARIABLE DECLARATION
+
 const urlEl = document.getElementById("url-el")
 const itemNameEl = document.getElementById("item-name-el")
 const saveInputBtn = document.getElementById("save-input-btn")
@@ -11,11 +13,17 @@ const itemFromLocalStorage = JSON.parse(localStorage.getItem("myItems"))
 let myURLs = []
 let myItems = []
 
+
+// Load localStorage on refresh if true
+
 if (urlFromLocalStorage && itemFromLocalStorage) {
     myURLs = urlFromLocalStorage
     myItems = itemFromLocalStorage
     render(myURLs, myItems)
 }
+
+
+// render() function
 
 function render(url, item) {
     let listUl = ""
@@ -30,10 +38,12 @@ function render(url, item) {
     ulEl.innerHTML = listUl
 }
 
-saveInputBtn.addEventListener("click", function() {
-    warningEl.textContent = ""
 
+// "SAVE INPUT" LOGIC
+
+function saveInput() {
     if (urlEl.value && itemNameEl.value) {
+        warningEl.textContent = ""
         myURLs.push(urlEl.value)
         myItems.push(itemNameEl.value)
         urlEl.value = ""
@@ -46,7 +56,26 @@ saveInputBtn.addEventListener("click", function() {
     } else {
         warningEl.textContent = "Please enter a URL."
     }
+}
+
+saveInputBtn.addEventListener("click", function() {
+    saveInput()
 })
+
+urlEl.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        saveInput()
+    }
+})
+
+itemNameEl.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        saveInput()
+    }
+})
+
+
+// "SAVE TAB" LOGIC
 
 saveTabBtn.addEventListener("click", function() {
     warningEl.textContent = ""
@@ -59,6 +88,9 @@ saveTabBtn.addEventListener("click", function() {
         render(myURLs, myItems)
     })
 })
+
+
+// "DELETE ALL" LOGIC
 
 deleteAllBtn.addEventListener("dblclick", function() {
     warningEl.textContent = ""
