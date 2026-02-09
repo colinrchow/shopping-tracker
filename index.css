@@ -13,7 +13,6 @@ highlight 2: #FFBD28 (yellow)*/
 
 body {
     background: #1B2024;
-    border: 0;
     min-width: 500px;
 }
 
@@ -52,6 +51,7 @@ button {
     padding: 10px 15px;
     margin: 5px 0;
 
+    cursor: pointer;
     transition: background-color 0.1s;
 }
 
@@ -69,4 +69,27 @@ button {
 
 #delete-all-btn:hover {
     background: #8d231f;
+}
+
+#warning-el {
+    color: #FE3F39;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 5px;
+}
+
+#ul-el {
+    font-size: 16px;
+    list-style: none;
+
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+
+#ul-el li {
+    margin: 15px 0;
+}
+
+li a {
+    color: #FFBD28;
 }
