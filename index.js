@@ -61,7 +61,7 @@ itemNameEl.addEventListener("input", function() {
 })
 
 
-// "SAVE INPUT" LOGIC
+// "SAVE INPUT" button logic
 
 function saveInput() {
     if (urlEl.value && itemNameEl.value) {
@@ -105,7 +105,7 @@ itemNameEl.addEventListener("keydown", function(e) {
 })
 
 
-// "SAVE TAB" LOGIC
+// "SAVE TAB" button logic
 
 saveTabBtn.addEventListener("click", function() {
     warningEl.textContent = ""
@@ -120,7 +120,7 @@ saveTabBtn.addEventListener("click", function() {
 })
 
 
-// "DELETE ALL" LOGIC
+// "DELETE ALL" button logic
 
 deleteAllBtn.addEventListener("dblclick", function() {
     warningEl.textContent = ""
