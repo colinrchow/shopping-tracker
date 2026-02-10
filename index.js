@@ -52,7 +52,13 @@ function saveInput() {
         localStorage.setItem("myItems", JSON.stringify(myItems))
         render(myURLs, myItems)
     } else if (urlEl.value && !itemNameEl.value) {
-        warningEl.textContent = "Please enter a name for your URL."
+        warningEl.textContent = ""
+        myURLs.push(urlEl.value)
+        myItems.push(urlEl.value)
+        urlEl.value = ""
+        localStorage.setItem("myURLs", JSON.stringify(myURLs))
+        localStorage.setItem("myItems", JSON.stringify(myItems))
+        render(myURLs, myItems)
     } else {
         warningEl.textContent = "Please enter a URL."
     }
