@@ -9,12 +9,19 @@ const warningEl = document.getElementById("warning-el")
 const ulEl = document.getElementById("ul-el")
 const urlFromLocalStorage = JSON.parse(localStorage.getItem("myURLs"))
 const itemFromLocalStorage = JSON.parse(localStorage.getItem("myItems"))
+const currentURLFromLocalStorage = localStorage.getItem("myCurrentURL")
+const currentItemFromLocalStorage = localStorage.getItem("myCurrentItem")
 
 let myURLs = []
 let myItems = []
 
 
 // Load localStorage on refresh if true
+
+if (currentURLFromLocalStorage && currentItemFromLocalStorage) {
+    urlEl.value = currentURLFromLocalStorage
+    itemNameEl.value = currentItemFromLocalStorage
+}
 
 if (urlFromLocalStorage && itemFromLocalStorage) {
     myURLs = urlFromLocalStorage
@@ -37,6 +44,21 @@ function render(url, item) {
     }
     ulEl.innerHTML = listUl
 }
+
+
+// Save input fields to localStorage
+
+urlEl.addEventListener("input", function() {
+    if (urlEl.value) {
+        localStorage.setItem("myCurrentURL", urlEl.value)
+    }
+})
+
+itemNameEl.addEventListener("input", function() {
+    if (itemNameEl.value) {
+        localStorage.setItem("myCurrentItem", itemNameEl.value)
+    }
+})
 
 
 // "SAVE INPUT" LOGIC
@@ -62,6 +84,8 @@ function saveInput() {
     } else {
         warningEl.textContent = "Please enter a URL."
     }
+    localStorage.setItem("myCurrentURL", "")
+    localStorage.setItem("myCurrentItem", "")
 }
 
 saveInputBtn.addEventListener("click", function() {
