@@ -13,9 +13,9 @@ A simple and efficient Chrome extension designed to help users track shopping it
 
 ## Technologies Used
 
-- **HTML5**: Structure and layout
-- **CSS3**: Styling and responsive design
-- **JavaScript (ES6+)**: Core functionality and DOM manipulation
+- **HTML**: Structure and layout
+- **CSS**: Styling and responsive design
+- **JavaScript**: Core functionality and DOM manipulation
 - **Chrome Extension API**: Tab querying and extension manifest
 - **Local Storage API**: Data persistence
 
@@ -79,10 +79,6 @@ This extension requires the following permission:
 ## Contributing
 
 This is a personal project, but feel free to fork and modify for your own use. Pull requests for improvements are welcome.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## Future Enhancements
 
