@@ -76,10 +76,6 @@ This extension requires the following permission:
 - **Event Handling**: Listens for button clicks, input changes, and keyboard events
 - **Chrome API Integration**: Queries active tabs for the "Save Tab" functionality
 
-## Contributing
-
-This is a personal project, but feel free to fork and modify for your own use. Pull requests for improvements are welcome.
-
 ## Future Enhancements
 
 - Add categories/tags for better organization
